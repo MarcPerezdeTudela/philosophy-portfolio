@@ -1,5 +1,8 @@
 ---
-
+import Layout from '@layouts/Layout.astro'
+import HeroSection from '@components/HeroSection.astro'
+import AboutSection from '@components/AboutSection.astro'
+import ExperienceSection from '@components/ExperienceSection.astro'
 ---
 
 <html lang="en">
@@ -10,7 +13,12 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+	<Layout>
+		<main class="flex flex-col px-6 py-12 gap-12 items-center">
+			<HeroSection />
+			<AboutSection />
+			<ExperienceSection />
+		</main>
+	</Layout>
 </html>
+

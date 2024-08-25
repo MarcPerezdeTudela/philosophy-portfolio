@@ -1,0 +1,38 @@
+---
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Link Inspector home page." />
+    <title>Link Inspector</title>
+    <title>Portfolio</title>
+  </head>
+  <body class="flex flex-col min-h-screen bg-zinc-200">
+    <slot class="grow" />
+  </body>
+</html>
+
+
+<style is:global>
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roman";
+  src: url("/fonts/Roman-SD.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("/fonts/Proxima-Nova-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+</style>
