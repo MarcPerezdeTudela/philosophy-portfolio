@@ -1,6 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro'
-import HeroSection from '@components/HeroSection.astro'
+import Hero from '@components/Hero.astro'
 import AboutSection from '@components/AboutSection.astro'
 import ExperienceSection from '@components/ExperienceSection.astro'
 ---
@@ -14,11 +14,19 @@ import ExperienceSection from '@components/ExperienceSection.astro'
 		<title>Astro</title>
 	</head>
 	<Layout>
+		<div class="w-full flex flex-col gap-1.5">
+			<div class="w-full h-1.5 bg-red-800"/>
+			<div class="w-full h-0.5 bg-red-800"/>
+		</div>
 		<main class="flex flex-col px-6 py-12 gap-12 items-center">
-			<HeroSection />
+			<Hero />
 			<AboutSection />
 			<ExperienceSection />
 		</main>
+		<div class="w-full flex flex-col gap-1.5">
+			<div class="w-full h-0.5 bg-red-800"/>
+			<div class="w-full h-1.5 bg-red-800"/>
+		</div>
 	</Layout>
 </html>
 

@@ -1,105 +1,70 @@
 ---
+import Section from '@components/Section.astro'
+import Quote from '@components/Quote.astro'
 ---
 
-<section class="w-full max-w-prose">
-  <div class="flex flex-col gap-4">
-    <div>
-      <h2 class="font-roman text-red-800 text-xl ">Experience</h2>
-      <div class="bg-gradient-to-r from-red-800 to-transparent h-[1px] w-full"></div>
-    </div>
-
-    <ol class="relative border-s border-red-800">                  
-        <li class="mb-10 ms-4">
-            <div class="absolute w-3 h-3 bg-red-800 rounded-full mt-1.5 -start-1.5 border border-red-800"></div>
-            <time class="mb-1 text-sm font-proximaNova leading-none text-gray-800">February 2022 - Actual</time>
-            <h3 class="text-lg font-proximaNova text-red-800">Fullstack Developer <span class="inline-block font-proximaNova font-normal text-gray-800">at </span> Tech Company</h3>
-            <span class="inline-block font-proximaNova text-gray-600 text-sm">Barcelona, Spain. Remote</span>
-            <div class="flex flex-col gap-4 mt-4">
-              <div>
-                <h4 class="text-lg font-proximaNova text-gray-800">Summary: </h4>
-                <ul class= "pl-4 list-disc marker:text-red-800">
-                  <li class="text-base font-normal text-gray-600"> Develop and maintain the company's website and web applications. Work with the team to develop new features and improve the user experience.</li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="text-lg font-proximaNova text-gray-800">Responsibilities: </h4>
-                <ul class= "pl-4 list-disc marker:text-red-800">
-                  <li class="text-base font-proximaNova text-gray-600"> Work togheter with the desing team to ensure the best user experience.</li>
-                  <li class="text-base font-proximaNova text-gray-600"> Plan and develop the backoffice platform for the company, and the API for the mobile app.</li> 
-                  <li class="text-base font-proximaNova text-gray-600"> Collaborate with the stakeholders to define the requirements and the scope of the projects.</li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="text-lg font-proximaNova text-gray-800">Achivements: </h4>
-                <ul class= "pl-4 list-disc marker:text-red-800">
-                  <li class="text-base font-proximaNova text-gray-600"> Increase the performance of the website by 30% by optimizing the code and the images.</li>
-                  <li class="text-base font-proximaNova text-gray-600"> Improve the conversion rate in the e-commerce platform and the mobile app.</li> 
-                </ul>
-              </div>
+<Section title="Experience">
+  <ol slot="content" class="relative border-s border-red-800">                  
+      <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 bg-red-800 rounded-full mt-1.5 -start-1.5 border border-red-800"></div>
+          <time class="mb-1 text-sm font-proximaNova leading-none text-gray-800">February 2022 - Actual</time>
+          <h3 class="text-lg font-proximaNova text-red-800">Fullstack Developer <span class="inline-block font-proximaNova font-normal text-gray-800">at </span> Tech Company</h3>
+          <span class="inline-block font-proximaNova text-gray-600 text-sm">Barcelona, Spain. Remote</span>
+          <div class="flex flex-col gap-4 mt-4">
+            <div>
+              <h4 class="text-lg font-proximaNova text-gray-800">Summary: </h4>
+              <ul class= "pl-4 list-disc marker:text-red-800">
+                <li class="text-base font-normal text-gray-600"> Develop and maintain the company's website and web applications. Work with the team to develop new features and improve the user experience.</li>
+              </ul>
             </div>
-        </li>
-
-        <li class="mb-10 ms-4">
-            <div class="absolute w-3 h-3 bg-red-800 rounded-full mt-1.5 -start-1.5 border border-red-800"></div>
-            <time class="mb-1 text-sm font-proximaNova leading-none text-gray-800">November 2021 - February 2022</time>
-            <h3 class="text-lg font-proximaNova text-red-800">Fullstack Developer <span class="inline-block font-proximaNova font-normal text-gray-800">at </span> Tech Company</h3>
-            <span class="inline-block font-proximaNova text-gray-600 text-sm">Barcelona, Spain. Remote</span>
-            <div class="flex flex-col gap-4 mt-4">
-              <div>
-                <h4 class="text-lg font-proximaNova text-gray-800">Summary: </h4>
-                <ul class= "pl-4 list-disc marker:text-red-800">
-                  <li class="text-base font-normal text-gray-600"> Develop and maintain the company's website and web applications. Work with the team to develop new features and improve the user experience.</li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="text-lg font-proximaNova text-gray-800">Responsibilities: </h4>
-                <ul class= "pl-4 list-disc marker:text-red-800">
-                  <li class="text-base font-proximaNova text-gray-600"> Work togheter with the desing team to ensure the best user experience.</li>
-                  <li class="text-base font-proximaNova text-gray-600"> Plan and develop the backoffice platform for the company, and the API for the mobile app.</li> 
-                  <li class="text-base font-proximaNova text-gray-600"> Collaborate with the stakeholders to define the requirements and the scope of the projects.</li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="text-lg font-proximaNova text-gray-800">Achivements: </h4>
-                <ul class= "pl-4 list-disc marker:text-red-800">
-                  <li class="text-base font-proximaNova text-gray-600"> Increase the performance of the website by 30% by optimizing the code and the images.</li>
-                  <li class="text-base font-proximaNova text-gray-600"> Improve the conversion rate in the e-commerce platform and the mobile app.</li> 
-                </ul>
-              </div>
+            <div>
+              <h4 class="text-lg font-proximaNova text-gray-800">Responsibilities: </h4>
+              <ul class= "pl-4 list-disc marker:text-red-800">
+                <li class="text-base font-proximaNova text-gray-600"> Work togheter with the desing team to ensure the best user experience.</li>
+                <li class="text-base font-proximaNova text-gray-600"> Plan and develop the backoffice platform for the company, and the API for the mobile app.</li> 
+                <li class="text-base font-proximaNova text-gray-600"> Collaborate with the stakeholders to define the requirements and the scope of the projects.</li>
+              </ul>
             </div>
-        </li>
-
-        <li class="mb-10 ms-4">
-            <div class="absolute w-3 h-3 bg-red-800 rounded-full mt-1.5 -start-1.5 border border-red-800"></div>
-            <time class="mb-1 text-sm font-proximaNova leading-none text-gray-800">May 2019 - November 2021</time>
-            <h3 class="text-lg font-proximaNova text-red-800">Fullstack Developer <span class="inline-block font-proximaNova font-normal text-gray-800">at </span> Tech Company</h3>
-            <span class="inline-block font-proximaNova text-gray-600 text-sm">Barcelona, Spain. Remote</span>
-            <div class="flex flex-col gap-4 mt-4">
-              <div>
-                <h4 class="text-lg font-proximaNova text-gray-800">Summary: </h4>
-                <ul class= "pl-4 list-disc marker:text-red-800">
-                  <li class="text-base font-normal text-gray-600"> Develop and maintain the company's website and web applications. Work with the team to develop new features and improve the user experience.</li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="text-lg font-proximaNova text-gray-800">Responsibilities: </h4>
-                <ul class= "pl-4 list-disc marker:text-red-800">
-                  <li class="text-base font-proximaNova text-gray-600"> Work togheter with the desing team to ensure the best user experience.</li>
-                  <li class="text-base font-proximaNova text-gray-600"> Plan and develop the backoffice platform for the company, and the API for the mobile app.</li> 
-                  <li class="text-base font-proximaNova text-gray-600"> Collaborate with the stakeholders to define the requirements and the scope of the projects.</li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="text-lg font-proximaNova text-gray-800">Achivements: </h4>
-                <ul class= "pl-4 list-disc marker:text-red-800">
-                  <li class="text-base font-proximaNova text-gray-600"> Increase the performance of the website by 30% by optimizing the code and the images.</li>
-                  <li class="text-base font-proximaNova text-gray-600"> Improve the conversion rate in the e-commerce platform and the mobile app.</li> 
-                </ul>
-              </div>
+            <div>
+              <h4 class="text-lg font-proximaNova text-gray-800">Achivements: </h4>
+              <ul class= "pl-4 list-disc marker:text-red-800">
+                <li class="text-base font-proximaNova text-gray-600"> Increase the performance of the website by 30% by optimizing the code and the images.</li>
+                <li class="text-base font-proximaNova text-gray-600"> Improve the conversion rate in the e-commerce platform and the mobile app.</li> 
+              </ul>
             </div>
-        </li>
+          </div>
+      </li>
 
-    </ol>
+      <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 bg-red-800 rounded-full mt-1.5 -start-1.5 border border-red-800"></div>
+          <time class="mb-1 text-sm font-proximaNova leading-none text-gray-800">November 2021 - February 2022</time>
+          <h3 class="text-lg font-proximaNova text-red-800">Fullstack Developer <span class="inline-block font-proximaNova font-normal text-gray-800">at </span> Tech Company</h3>
+          <span class="inline-block font-proximaNova text-gray-600 text-sm">Barcelona, Spain. Remote</span>
+          <div class="flex flex-col gap-4 mt-4">
+            <div>
+              <h4 class="text-lg font-proximaNova text-gray-800">Summary: </h4>
+              <ul class= "pl-4 list-disc marker:text-red-800">
+                <li class="text-base font-normal text-gray-600"> Develop and maintain the company's website and web applications. Work with the team to develop new features and improve the user experience.</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-proximaNova text-gray-800">Responsibilities: </h4>
+              <ul class= "pl-4 list-disc marker:text-red-800">
+                <li class="text-base font-proximaNova text-gray-600"> Work togheter with the desing team to ensure the best user experience.</li>
+                <li class="text-base font-proximaNova text-gray-600"> Plan and develop the backoffice platform for the company, and the API for the mobile app.</li> 
+                <li class="text-base font-proximaNova text-gray-600"> Collaborate with the stakeholders to define the requirements and the scope of the projects.</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-lg font-proximaNova text-gray-800">Achivements: </h4>
+              <ul class= "pl-4 list-disc marker:text-red-800">
+                <li class="text-base font-proximaNova text-gray-600"> Increase the performance of the website by 30% by optimizing the code and the images.</li>
+                <li class="text-base font-proximaNova text-gray-600"> Improve the conversion rate in the e-commerce platform and the mobile app.</li> 
+              </ul>
+            </div>
+          </div>
+      </li>
+  </ol>
 
-  </div>
-</section>
+  <Quote slot="quote" />
+</Section>
