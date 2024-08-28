@@ -7,12 +7,12 @@ const { title } = Astro.props;;
 ---
 
 <section class="w-full max-w-prose">
-  <div class="flex flex-col gap-4">
+  <div class="flex flex-col gap-6">
     <div>
-      <h2 class="font-roman text-red-800 text-xl ">{ title }</h2>
+      <h2 class="font-roman text-red-800 text-2xl ">{ title }</h2>
       <div class="bg-gradient-to-r from-red-800 to-transparent h-[1px] w-full"></div>
     </div>
-    <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-12">
       <slot name="content" />
       <slot name="quote" />
     </div>
