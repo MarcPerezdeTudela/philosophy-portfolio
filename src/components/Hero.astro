@@ -3,6 +3,7 @@ import WorldIcon from '@icons/WorldIcon.astro'
 import GithubIcon from '@icons/GithubIcon.astro'
 import LinkedInIcon from '@icons/LinkedInIcon.astro'
 import MailIcon from '@icons/MailIcon.astro'
+import GoodreadsIcon from '@icons/GoodreadsIcon.astro'
 ---
 
 <section class="flex flex-col gap-4 max-w-prose">
@@ -10,25 +11,18 @@ import MailIcon from '@icons/MailIcon.astro'
     <div>
       <h1 class="font-roman text-gray-800 text-3xl">Jhon <span class="text-red-800">Doe</span></h1>
       <h2 class="font-proximaNova text-xl text-red-800 ">Fullstack Developer.</h2>
-    </div>
-    <p class="font-proximaNova text-gray-600 text-md">Passionate about philosophy and programming. +2 years of experience as profesional developer.</p>
-    <div class="flex flex-col gap-2">
       <div class="flex gap-2 text-gray-600 items-center">
         <WorldIcon/>
         <span class="font-proximaNova text-md whitespace-nowrap">Barcelona, Spain</span>
       </div>
-      <div class="flex gap-4 items-center">
-        <div class="border border-gray-400 border-opacity-50 rounded-md p-1">
-          <GithubIcon/>
-        </div>
-        <div class="border border-gray-400 border-opacity-50 rounded-md p-1">
-          <LinkedInIcon/>
-        </div>
-        <div class="border border-gray-400 border-opacity-50 rounded-md p-1">
-          <MailIcon/>
-        </div>
     </div>
-  </div>
+    <p class="font-proximaNova text-gray-600 text-md pt-4 pb-2">Passionate about philosophy and programming. +2 years of experience as profesional developer.</p>
+    <div class="flex gap-3 items-center">
+      <GithubIcon/>
+      <MailIcon/>
+      <LinkedInIcon/>
+      <GoodreadsIcon/>
+    </div>
 </section>
 
 
