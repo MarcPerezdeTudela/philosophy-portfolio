@@ -4,7 +4,10 @@ import Quote from '@components/Quote.astro'
 ---
 
 <Section title="About">
-  <p slot="content" class="font-proximaNova text-gray-600 text-lg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac convallis lectus. Quisque pharetra at risus eget malesuada. Aliquam facilisis fermentum nibh, in semper nibh. Donec lacinia dui id dolor sollicitudin, sed volutpat erat congue. Praesent condimentum quam eget felis ultricies, et semper est luctus. Donec et nibh id orci rhoncus facilisis. Vestibulum ut lobortis nunc. Pellentesque mattis diam tellus, id vehicula nisl dapibus at.</p>
+  <div slot="content" class="flex flex-col gap-4">
+    <p class="font-proximaNova text-gray-600"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac convallis lectus. Quisque pharetra at risus eget malesuada. Aliquam facilisis fermentum nibh, in semper nibh.</p>
+    <p class="font-proximaNova text-gray-600"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at iaculis ante. Morbi luctus justo neque, ut consequat lorem pellentesque id. Ut ut ornare ex. Maecenas scelerisque augue ornare tempor porttitor. Curabitur eleifend tincidunt augue, sit amet vestibulum justo scelerisque vitae. </p>
+  </div>
   <Quote slot="quote"/>
 </Section>
 
