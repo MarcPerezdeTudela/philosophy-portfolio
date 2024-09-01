@@ -8,7 +8,7 @@
     <title>Link Inspector</title>
     <title>Portfolio</title>
   </head>
-  <body class="flex flex-col bg-slate-100 leading-relaxed font-proximaNova">
+  <body class="flex flex-col items-center bg-slate-200 leading-relaxed font-proximaNova">
     <slot class="grow" />
   </body>
 </html>
@@ -23,16 +23,18 @@
 
 @font-face {
   font-family: "Roman";
-  src: url("/fonts/Roman-SD.ttf") format("opentype");
+  src: url("/fonts/Roman-SD.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "ProximaNova";
-  src: url("/fonts/Proxima-Nova-Regular.otf") format("opentype");
+  src: url("/fonts/Proxima-Nova-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
+[x-cloak] { display: none !important; }
 </style>
