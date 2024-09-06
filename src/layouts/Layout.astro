@@ -1,4 +1,6 @@
 ---
+import Header from './Header.astro'
+import Footer from './Footer.astro'
 ---
 <html lang="en">
   <head>
@@ -8,8 +10,26 @@
     <title>Link Inspector</title>
     <title>Portfolio</title>
   </head>
-  <body class="flex flex-col items-center bg-slate-200 leading-relaxed font-proximaNova">
-    <slot class="grow" />
+  <body class="flex flex-col items-center bg-neutral-100 leading-relaxed font-proximaNova">
+
+		<div class="w-full flex flex-col gap-1.5">
+			<div class="w-full h-1.5 bg-red-800"/>
+			<div class="w-full h-0.5 bg-red-800"/>
+		</div>
+
+		<div class ="grid grid-cols-1 lg:grid-cols-2 justify-items-center px-6 py-12 lg:pt-24 gap-y-12 lg:gap-x-24 lg:max-w-screen-2xl">
+			<div class="lg:relative lg:pl-16 w-full">
+				<Header />
+			</div>
+      <slot class="grow" />
+      <Footer />
+    </div>
+
+		<div class="w-full flex flex-col gap-1.5">
+			<div class="w-full h-0.5 bg-red-800"/>
+			<div class="w-full h-1.5 bg-red-800"/>
+		</div>
+
   </body>
 </html>
 
