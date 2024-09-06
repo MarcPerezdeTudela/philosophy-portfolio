@@ -1,6 +1,6 @@
 ---
 import Section from '@components/Section.astro'
-import OpenIcon from '@icons/OpenIcon.astro'
+import { Icon } from 'astro-icon/components'
 ---
 
 <Section title="Education">
@@ -10,7 +10,7 @@ import OpenIcon from '@icons/OpenIcon.astro'
       <div class="flex flex-col font-proximaNova">
         <span class="flex items-center gap-1">
           <span class="font-semibold leading-tight text-lg text-gray-800">UNED</span>
-          <OpenIcon/>
+          <Icon name="tabler:external-link" class="text-gray-800 size-5 inline-block" />
         </span>
         <span class="font-semibold text-red-800 leading-tight text-md">Bachelor Degree of Philosophy</span>
         <span class="text-gray-600 text-sm mt-1">2024 - Actual</span>
@@ -19,7 +19,7 @@ import OpenIcon from '@icons/OpenIcon.astro'
       <div class="flex flex-col font-proximaNova">
         <span class="flex items-center gap-1">
           <span class="font-semibold leading-tight text-lg text-gray-800">INS Puig Castellar</span>
-          <OpenIcon/>
+          <Icon name="tabler:external-link" class="text-gray-800 size-5 inline-block" />
         </span>
         <span class="font-semibold text-red-800 leading-tight text-md">Associate Degree of Computer Science</span>
         <span class="text-gray-600 text-sm mt-1">2017 - 2019</span>

@@ -1,87 +1,97 @@
 ---
 import Section from '@components/Section.astro'
-import OpenIcon from '@icons/OpenIcon.astro'
+import { Icon } from 'astro-icon/components'
 ---
 
 <Section title="Experience">
-  <ol slot="content" class="relative border-s border-red-800">                  
+  <ol slot="content" x-data="{hoveringSection: false}" class="relative border-s border-red-800">                  
 
-      <li class="mb-10 ms-4">
-          <div class="absolute w-3 h-3 bg-red-800 rounded-full mt-1.5 -start-1.5 border border-red-800"></div>
-            <div class="flex flex-col gap-0.5">
-              <div class="flex flex-wrap gap-1 items-center">
-                <span class="text-lg font-proximaNova leading-tight font-semibold text-gray-800">Fullstack Developer</span> 
-                <span class="font-proximaNova leading-tight font-semibold text-lg text-gray-600 text-wrap px-0.5">·</span>
-                <span class="font-proximaNova leading-tight font-semibold text-lg text-gray-800 text-wrap">Tech</span>
-                <span class="font-proximaNova leading-tight font-semibold text-lg text-gray-800 text-wrap">Company
-                  <OpenIcon/>
-                </span>
+      <li x-data="{hoveringItem: false}"  class="mb-10 ms-4 group"  >
+        <div class="absolute transition-all duration-300 size-3 bg-red-800 rounded-full mt-1.5 -start-1.5 border border-red-800"></div>
+        <div class="group-hover:translate-x-2 transition-[transform,opacity] duration-300" @mouseover="hoveringItem = true; hoveringSection = true" @mouseleave="hoveringSection = false; hoveringItem = false" :class="!hoveringItem && hoveringSection ? 'opacity-40': 'opacity-100'">
+          <a href="#">
+              <div class="flex flex-col gap-0.5">
+                <div class="flex flex-wrap gap-1 items-center">
+                  <span class="text-lg font-proximaNova leading-tight font-semibold text-gray-800 group-hover:text-red-800">Fullstack Developer</span> 
+                  <span class="font-proximaNova leading-tight font-semibold text-lg text-gray-600 group-hover:text-red-800 text-wrap px-0.5">·</span>
+                  <span class="font-proximaNova leading-tight font-semibold text-lg text-gray-800 group-hover:text-red-800 text-wrap">Tech</span>
+                  <span class="font-proximaNova leading-tight font-semibold text-lg text-gray-800 group-hover:text-red-800 text-wrap">Company
+                    <Icon name="tabler:link" class="text-gray-800 size-5 inline-block group-hover:text-red-800" />
+                  </span>
+                </div>
+                <time class="flex text-sm font-proximaNova text-gray-600">February 2022 - Actual</time>
               </div>
-              <time class="flex text-sm font-proximaNova text-gray-600">February 2022 - Actual</time>
-            </div>
 
-            <div class="flex flex-col gap-4 mt-4">
-              <div>
-                <span class="text-md font-proximaNova font-semibold text-gray-600">Summary: </span>
-                <ul class= "pl-4 list-disc marker:text-red-800">
-                  <li class="text-md font-normal text-gray-600"> Develop and maintain the company's website and web applications. Work with the team to develop new features and improve the user experience.</li>
-                </ul>
+              <div class="flex flex-col gap-4 mt-4">
+                <div>
+                  <span class="text-md font-proximaNova font-semibold text-gray-600 group-hover:text-red-800">Summary: </span>
+                  <ul class= "pl-4 list-disc marker:text-red-800">
+                    <li class="text-md font-normal text-gray-600"> Develop and maintain the company's website and web applications. Work with the team to develop new features and improve the user experience.</li>
+                  </ul>
+                </div>
+                <div>
+                  <span class="text-md font-proximaNova font-semibold text-gray-600 group-hover:text-red-800">Responsibilities: </span>
+                  <ul class= "pl-4 list-disc marker:text-red-800">
+                    <li class="text-md font-proximaNova text-gray-600"> Work togheter with the desing team to ensure the best user experience.</li>
+                    <li class="text-md font-proximaNova text-gray-600"> Plan and develop the backoffice platform for the company, and the API for the mobile app.</li> 
+                    <li class="text-md font-proximaNova text-gray-600"> Collaborate with the stakeholders to define the requirements and the scope of the projects.</li>
+                  </ul>
+                </div>
+                <div>
+                  <span class="text-md font-proximaNova font-semibold text-gray-600 group-hover:text-red-800">Achivements: </span>
+                  <ul class= "pl-4 list-disc marker:text-red-800">
+                    <li class="text-md font-proximaNova text-gray-600"> Increase the performance of the website by 30% by optimizing the code and the images.</li>
+                    <li class="text-md font-proximaNova text-gray-600"> Improve the conversion rate in the e-commerce platform and the mobile app.</li> 
+                  </ul>
+                </div>
               </div>
-              <div>
-                <span class="text-md font-proximaNova font-semibold text-gray-600">Responsibilities: </span>
-                <ul class= "pl-4 list-disc marker:text-red-800">
-                  <li class="text-md font-proximaNova text-gray-600"> Work togheter with the desing team to ensure the best user experience.</li>
-                  <li class="text-md font-proximaNova text-gray-600"> Plan and develop the backoffice platform for the company, and the API for the mobile app.</li> 
-                  <li class="text-md font-proximaNova text-gray-600"> Collaborate with the stakeholders to define the requirements and the scope of the projects.</li>
-                </ul>
-              </div>
-              <div>
-                <span class="text-md font-proximaNova font-semibold text-gray-600">Achivements: </span>
-                <ul class= "pl-4 list-disc marker:text-red-800">
-                  <li class="text-md font-proximaNova text-gray-600"> Increase the performance of the website by 30% by optimizing the code and the images.</li>
-                  <li class="text-md font-proximaNova text-gray-600"> Improve the conversion rate in the e-commerce platform and the mobile app.</li> 
-                </ul>
-              </div>
-          </div>
+          </a>
+        </div>
+
       </li>
 
-      <li class="mb-10 ms-4">
-          <div class="absolute w-3 h-3 bg-red-800 rounded-full mt-1.5 -start-1.5 border border-red-800"></div>
-            <div class="flex flex-col gap-0.5">
-              <div class="flex flex-wrap gap-1 items-center">
-                <span class="text-lg font-proximaNova leading-tight font-semibold text-gray-800">Fullstack Developer</span> 
-                <span class="font-proximaNova leading-tight font-semibold text-lg text-gray-600 text-wrap px-0.5">·</span>
-                <span class="font-proximaNova leading-tight font-semibold text-lg text-gray-800 text-wrap">Tech</span>
-                <span class="font-proximaNova leading-tight font-semibold text-lg text-gray-800 text-wrap">Company
-                  <OpenIcon/>
-                </span>
+      <li x-data="{hoveringItem: false}"  class="mb-10 ms-4 group"  >
+        <div class="absolute transition-all duration-300 size-3 bg-red-800 rounded-full mt-1.5 -start-1.5 border border-red-800"></div>
+        <div class="group-hover:translate-x-2 transition-[transform,opacity] duration-300" @mouseover="hoveringItem = true; hoveringSection = true" @mouseleave="hoveringSection = false; hoveringItem = false" :class="!hoveringItem && hoveringSection ? 'opacity-40': 'opacity-100'">
+          <a href="#">
+              <div class="flex flex-col gap-0.5">
+                <div class="flex flex-wrap gap-1 items-center">
+                  <span class="text-lg font-proximaNova leading-tight font-semibold text-gray-800 group-hover:text-red-800">Fullstack Developer</span> 
+                  <span class="font-proximaNova leading-tight font-semibold text-lg text-gray-600 group-hover:text-red-800 text-wrap px-0.5">·</span>
+                  <span class="font-proximaNova leading-tight font-semibold text-lg text-gray-800 group-hover:text-red-800 text-wrap">Tech</span>
+                  <span class="font-proximaNova leading-tight font-semibold text-lg text-gray-800 group-hover:text-red-800 text-wrap">Company
+                    <Icon name="tabler:link" class="text-gray-800 size-5 inline-block group-hover:text-red-800" />
+                  </span>
+                </div>
+                <time class="flex text-sm font-proximaNova text-gray-600">February 2022 - Actual</time>
               </div>
-              <time class="flex text-sm font-proximaNova text-gray-600">February 2022 - Actual</time>
-            </div>
 
-          <div class="flex flex-col gap-4 mt-4">
-            <div>
-              <span class="text-lg font-proximaNova font-semibold text-gray-600">Summary: </span>
-              <ul class= "pl-4 list-disc marker:text-red-800">
-                <li class="text-md font-normal text-gray-600"> Develop and maintain the company's website and web applications. Work with the team to develop new features and improve the user experience.</li>
-              </ul>
-            </div>
-            <div>
-              <span class="text-lg font-proximaNova font-semibold text-gray-600">Responsibilities: </span>
-              <ul class= "pl-4 list-disc marker:text-red-800">
-                <li class="text-md font-proximaNova text-gray-600"> Work togheter with the desing team to ensure the best user experience.</li>
-                <li class="text-md font-proximaNova text-gray-600"> Plan and develop the backoffice platform for the company, and the API for the mobile app.</li> 
-                <li class="text-md font-proximaNova text-gray-600"> Collaborate with the stakeholders to define the requirements and the scope of the projects.</li>
-              </ul>
-            </div>
-            <div>
-              <span class="text-lg font-proximaNova font-semibold text-gray-600">Achivements: </span>
-              <ul class= "pl-4 list-disc marker:text-red-800">
-                <li class="text-base font-proximaNova text-gray-600"> Increase the performance of the website by 30% by optimizing the code and the images.</li>
-                <li class="text-base font-proximaNova text-gray-600"> Improve the conversion rate in the e-commerce platform and the mobile app.</li> 
-              </ul>
-            </div>
-          </div>
+              <div class="flex flex-col gap-4 mt-4">
+                <div>
+                  <span class="text-md font-proximaNova font-semibold text-gray-600 group-hover:text-red-800">Summary: </span>
+                  <ul class= "pl-4 list-disc marker:text-red-800">
+                    <li class="text-md font-normal text-gray-600"> Develop and maintain the company's website and web applications. Work with the team to develop new features and improve the user experience.</li>
+                  </ul>
+                </div>
+                <div>
+                  <span class="text-md font-proximaNova font-semibold text-gray-600 group-hover:text-red-800">Responsibilities: </span>
+                  <ul class= "pl-4 list-disc marker:text-red-800">
+                    <li class="text-md font-proximaNova text-gray-600"> Work togheter with the desing team to ensure the best user experience.</li>
+                    <li class="text-md font-proximaNova text-gray-600"> Plan and develop the backoffice platform for the company, and the API for the mobile app.</li> 
+                    <li class="text-md font-proximaNova text-gray-600"> Collaborate with the stakeholders to define the requirements and the scope of the projects.</li>
+                  </ul>
+                </div>
+                <div>
+                  <span class="text-md font-proximaNova font-semibold text-gray-600 group-hover:text-red-800">Achivements: </span>
+                  <ul class= "pl-4 list-disc marker:text-red-800">
+                    <li class="text-md font-proximaNova text-gray-600"> Increase the performance of the website by 30% by optimizing the code and the images.</li>
+                    <li class="text-md font-proximaNova text-gray-600"> Improve the conversion rate in the e-commerce platform and the mobile app.</li> 
+                  </ul>
+                </div>
+              </div>
+          </a>
+        </div>
+
       </li>
   </ol>
 
